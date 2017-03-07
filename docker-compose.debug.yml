@@ -1,0 +1,18 @@
+version: '2' 
+
+services:
+  web:
+    build: web
+    ports:
+      - "8082:8082"
+
+  api:
+    build: api
+    ports:
+      - "8081:8081"
+    links: 
+        - db
+  db:
+    image: mongo
+    ports:
+      - "27017:27017"

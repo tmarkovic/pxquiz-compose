@@ -1,0 +1,19 @@
+version: '2' 
+
+services:
+  web:
+    image: tmarkovic/docker-angular-cli:latest
+    ports:
+      - "4200:4200"
+
+  api:
+    image: tmarkovic/docker-express:latest
+    ports:
+      - "3000:3000"
+    links: 
+        - db
+
+  db:
+    image: mongo
+    ports:
+      - "27017:27017"
