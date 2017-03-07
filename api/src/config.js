@@ -54,7 +54,7 @@ const config = {
     ip: process.env.IP || undefined,
     port: process.env.PORT || 8081,
     mongo: {
-      uri: process.env.MONGODB_URI || 'mongodb://localhost/pxquiz-api'
+      uri: process.env.MONGODB_URI || 'mongodb://db/pxquiz-api'
     }
   }
 }
