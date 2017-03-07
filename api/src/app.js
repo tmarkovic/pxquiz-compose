@@ -3,8 +3,10 @@ import { env, mongo, port, ip } from './config'
 import mongoose from './services/mongoose'
 import express from './services/express'
 import api from './api'
+var cors = require('cors');
 
 const app = express(api)
+app.use(cors());
 const server = http.createServer(app)
 
 var db = mongoose.connection

@@ -6,7 +6,8 @@ console.log(submission)
   return fetch("http://localhost:8081/quizzes", {
     method: "POST",
     body: JSON.stringify(submission),
-    headers: myHeaders
+    headers: myHeaders,
+    mode: 'cors',
   });
 }
 
